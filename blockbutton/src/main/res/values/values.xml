@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BlockButton">
+        <attr format="integer" name="pushDepthDp"/>
+
+        <attr format="color" name="buttonColor"/>
+        <attr format="color" name="buttonGapColor"/>
+        <attr format="color" name="buttonDisabledColor"/>
+        <attr format="color" name="buttonDisabledGapColor"/>
+    </declare-styleable>
+</resources>
