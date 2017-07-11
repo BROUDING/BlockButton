@@ -4,7 +4,7 @@ Android Block style Button by BROUDING
 
 # Sample .apk
 
-You can download the latest sample APK from this repo here: https://github.com/brouding/BlockButton/blob/master/sample/SimpleDialogSample.apk
+You can download the latest sample APK from this repo here: https://github.com/brouding/BlockButton/blob/master/sample/BlockButtonSample.apk
 
 # Gradle Dependency
 ### Repository
