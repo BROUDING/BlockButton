@@ -31,7 +31,8 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.brouding:android-simple-dialog:0.2.2'
+    compile 'com.andkulikov:transitionseverywhere:1.7.4'
+    compile 'com.brouding:android-simple-dialog:0.2.3.3'
     compile project(":blockbutton")
     testCompile 'junit:junit:4.12'
 }

@@ -11,6 +11,8 @@ import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
 import android.support.annotation.Nullable;
+import android.support.v4.*;
+import android.support.v4.BuildConfig;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
@@ -71,12 +73,18 @@ public class BlockButton extends LinearLayout {
 
             pushDepth      = getPXWithDP( getPushDepth(array) );
 
+            array.recycle();
+
             this.generalPaddingTop = paddingTop - pushDepth/2;
             this.pressedPaddingTop = paddingTop +pushDepth;
         }
 
         this.setPadding(this.paddingLeft, this.generalPaddingTop, this.paddingRight, this.paddingBottom);
-        this.setBackground( makeSelector() );
+
+        if(Build.VERSION.SDK_INT <= 15)
+            this.setBackgroundDrawable( makeSelector() );
+        else
+            this.setBackground( makeSelector() );
     }
 
     @Override
