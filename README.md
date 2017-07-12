@@ -2,7 +2,7 @@
 
 Android Block style Button by BROUDING
 
-![Sample Video](http://github.com/brouding/blockbutton/blob/master/sample/sample_video.gif)
+![Sample Video](https://github.com/BROUDING/BlockButton/blob/master/sample/sample_video.gif?raw=true)
 
 # Sample .apk
 

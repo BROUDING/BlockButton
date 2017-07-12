@@ -132,11 +132,11 @@ public class BlockButton extends LinearLayout {
     }
 
     protected int getBtnColor(final TypedArray typedArray) {
-        return typedArray.getColor(R.styleable.BlockButton_buttonColor, Color.GRAY);
+        return typedArray.getColor(R.styleable.BlockButton_buttonColor, ContextCompat.getColor(mContext, R.color.colorPrimary));
     }
 
     protected int getBtnGapColor(final TypedArray typedArray) {
-        return typedArray.getColor(R.styleable.BlockButton_buttonGapColor, Color.DKGRAY);
+        return typedArray.getColor(R.styleable.BlockButton_buttonGapColor, ContextCompat.getColor(mContext, R.color.colorPrimaryDark));
     }
 
     protected int getBtnDisabledColor(final TypedArray typedArray) {
