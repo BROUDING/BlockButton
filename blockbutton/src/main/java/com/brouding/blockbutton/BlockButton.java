@@ -4,24 +4,16 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
 import android.support.annotation.Nullable;
-import android.support.v4.*;
-import android.support.v4.BuildConfig;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
-import android.util.DisplayMetrics;
-import android.util.Log;
 import android.util.TypedValue;
 import android.widget.LinearLayout;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by John on 7/7/17.
@@ -95,9 +87,9 @@ public class BlockButton extends LinearLayout {
 
     private StateListDrawable makeSelector() {
         StateListDrawable res = new StateListDrawable();
-        res.addState(new int[] { android.R.attr.state_enabled, -android.R.attr.state_pressed }, setButtonDrawable(R.drawable.bg_enter_round_layer_default_normal,  false));
-        res.addState(new int[] { android.R.attr.state_enabled, android.R.attr.state_pressed  }, setButtonDrawable(R.drawable.bg_enter_round_layer_default_pressed, true));
-        res.addState(new int[] { -android.R.attr.state_enabled }, setButtonDrawable(R.drawable.bg_enter_round_layer_default_disabled, false));
+        res.addState(new int[] { android.R.attr.state_enabled, -android.R.attr.state_pressed }, setButtonDrawable(R.drawable.brouding_block_button_bg_layer_default_normal,  false));
+        res.addState(new int[] { android.R.attr.state_enabled, android.R.attr.state_pressed  }, setButtonDrawable(R.drawable.brouding_block_button_bg_layer_default_pressed, true));
+        res.addState(new int[] { -android.R.attr.state_enabled }, setButtonDrawable(R.drawable.brouding_block_button_bg_layer_default_disabled, false));
         return res;
     }
 
@@ -114,7 +106,7 @@ public class BlockButton extends LinearLayout {
             layerDrawable.setLayerInset(1, 0, 0, 0, (pushDepth+4));
         }
 
-        if( drawableId == R.drawable.bg_enter_round_layer_default_disabled ) {
+        if( drawableId == R.drawable.brouding_block_button_bg_layer_default_disabled) {
             btnDrawable.setColor(btnDisabledColor);
             btnShadowDrawable.setColor(btnDisabledGapColor);
 

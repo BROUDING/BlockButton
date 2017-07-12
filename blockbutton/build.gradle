@@ -5,7 +5,7 @@ publish {
     userOrg = 'brouding'
     groupId = 'com.brouding'
     artifactId = 'android-block-button'
-    publishVersion = '0.1.0'
+    publishVersion = '0.1.2.1'
     desc = 'Android Block Button'
     website = 'https://github.com/BROUDING/BlockButton'
     issueTracker = "https://github.com/BROUDING/BlockButton/issues"
@@ -13,12 +13,12 @@ publish {
 }
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION as String
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 26
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
         versionCode 1
         versionName "1.0"
 
@@ -42,6 +42,6 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26.+'
+    compile "com.android.support:appcompat-v7:${SUPPORT_V7_VERSION}"
     testCompile 'junit:junit:4.12'
 }

@@ -8,12 +8,24 @@ Android Block style Button by BROUDING
 
 You can download the latest sample APK from this repo here: https://github.com/brouding/BlockButton/blob/master/sample/BlockButtonSample.apk
 
+---
 # Gradle Dependency
 ### Repository
-The Gradle dependency is available via [jCenter](https://bintray.com/brouding/maven/android-simple-dialog).
+The Gradle dependency is available via [jCenter](https://bintray.com/brouding/maven/android-block-button).
 jCenter is the default Maven repository used by Android Studio.
+
 The minimum API level supported by this library is API 14, Android 4.0 (ICE_CREAM_SANDWICH)
 
+
+### Import to your project
+add below code in `build.gradle (Module: app)`
+```gradle
+dependencies {
+	// ... other dependencies here
+    compile 'com.brouding:android-block-button:0.1.2.1'
+}
+```
+---
 
 
 License
