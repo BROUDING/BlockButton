@@ -63,11 +63,11 @@ public class BlockButton extends LinearLayout {
             btnDisabledColor    = getBtnDisabledColor(array);
             btnDisabledGapColor = getBtnDisabledGapColor(array);
 
-            pushDepth      = getPXWithDP( getPushDepth(array) );
+            pushDepth = getPXWithDP( getPushDepth(array) );
 
             array.recycle();
 
-            this.generalPaddingTop = paddingTop - pushDepth/2;
+            this.generalPaddingTop = paddingTop -pushDepth/2;
             this.pressedPaddingTop = paddingTop +pushDepth;
         }
 
