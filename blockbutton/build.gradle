@@ -5,7 +5,7 @@ publish {
     userOrg = 'brouding'
     groupId = 'com.brouding'
     artifactId = 'android-block-button'
-    publishVersion = '0.1.2.1'
+    publishVersion = '0.1.2.2'
     desc = 'Android Block Button'
     website = 'https://github.com/BROUDING/BlockButton'
     issueTracker = "https://github.com/BROUDING/BlockButton/issues"

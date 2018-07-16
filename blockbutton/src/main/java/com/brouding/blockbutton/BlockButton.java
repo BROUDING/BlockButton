@@ -12,6 +12,7 @@ import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.widget.LinearLayout;
 
@@ -94,7 +95,7 @@ public class BlockButton extends LinearLayout {
     }
 
     private Drawable setButtonDrawable(int drawableId, boolean isPressed) {
-        LayerDrawable layerDrawable = (LayerDrawable) ContextCompat.getDrawable(mContext, drawableId);
+        LayerDrawable layerDrawable = (LayerDrawable) ContextCompat.getDrawable(mContext, drawableId).mutate();
 
         GradientDrawable btnDrawable       = (GradientDrawable) layerDrawable.findDrawableByLayerId(R.id.btn);
         GradientDrawable btnShadowDrawable = (GradientDrawable) layerDrawable.findDrawableByLayerId(R.id.btnShadow);

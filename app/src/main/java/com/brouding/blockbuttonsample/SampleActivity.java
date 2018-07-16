@@ -156,11 +156,10 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                         .setContent("This is guide SimpleDialog :)\n\n- You can pinch the view !")
                         .setGuideImage(R.drawable.image_guide_pinch)    // Not necessary
                         .setGuideImageSizeDp(150, 150)
-                        .setPreferenceName(Pref.PREFERENCE_NAME)
-                        .setPermanentCheckKey(Pref.KEY_FIRST_WELCOME)
-                        .onConfirmWithPermanentCheck(new SimpleDialog.BtnCallback() {
+                        .setPermanentCheck(Pref.PREFERENCE_NAME, Pref.KEY_FIRST_WELCOME)
+                        .onConfirm(new SimpleDialog.BtnCallbackWithPermanentCheck() {
                             @Override
-                            public void onClick(@NonNull SimpleDialog dialog, @NonNull SimpleDialog.BtnAction which) {
+                            public void onClick(@NonNull SimpleDialog dialog, @NonNull SimpleDialog.BtnAction which, boolean isPermanentChecked) {
                                 setBtnGuideReset(true);
                             }
                         })
