@@ -25,7 +25,7 @@ add below code in `build.gradle (Module: app)`
 ```gradle
 dependencies {
 	// ... other dependencies here
-    compile 'com.brouding:android-block-button:0.1.2.1'
+    compile 'com.brouding:android-block-button:0.1.2.2'
 }
 ```
 ---
