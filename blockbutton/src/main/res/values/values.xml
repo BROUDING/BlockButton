@@ -7,5 +7,8 @@
         <attr format="color" name="buttonGapColor"/>
         <attr format="color" name="buttonDisabledColor"/>
         <attr format="color" name="buttonDisabledGapColor"/>
+
+        <attr format="integer" name="buttonStrokeWidth"/>
+        <attr format="color"   name="buttonStrokeColor"/>
     </declare-styleable>
 </resources>

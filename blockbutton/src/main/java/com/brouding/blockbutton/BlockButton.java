@@ -22,8 +22,8 @@ import android.widget.LinearLayout;
 
 public class BlockButton extends LinearLayout {
     private Context mContext;
-    private int paddingTop = 0, paddingBottom = 0, paddingLeft = 0, paddingRight = 0, generalPaddingTop = 0, pressedPaddingTop,
-                pushDepth = 0,  btnColor = 0, btnGapColor = 0, btnDisabledColor = 0, btnDisabledGapColor = 0;
+    private int paddingTop=0, paddingBottom=0, paddingLeft=0, paddingRight=0, generalPaddingTop=0, pressedPaddingTop=0,
+                pushDepth=0,  btnColor=0, btnGapColor=0, btnDisabledColor=0, btnDisabledGapColor=0, btnStokeWidth=0, btnStrokeColor=0;
 
     public BlockButton(Context context) {
         super(context);
@@ -63,6 +63,8 @@ public class BlockButton extends LinearLayout {
             btnGapColor = getBtnGapColor(array);
             btnDisabledColor    = getBtnDisabledColor(array);
             btnDisabledGapColor = getBtnDisabledGapColor(array);
+            btnStokeWidth  = getPXWithDP( getBtnStrokeWidth(array) );
+            btnStrokeColor = getBtnStrokeColor(array);
 
             pushDepth = getPXWithDP( getPushDepth(array) );
 
@@ -115,6 +117,8 @@ public class BlockButton extends LinearLayout {
         }
 
         btnDrawable.setColor(btnColor);
+        if( btnStokeWidth!=0 )
+            btnDrawable.setStroke(btnStokeWidth, btnStrokeColor);
         btnShadowDrawable.setColor(btnGapColor);
 
         return layerDrawable;
@@ -138,6 +142,14 @@ public class BlockButton extends LinearLayout {
 
     protected int getBtnDisabledGapColor(final TypedArray typedArray) {
         return typedArray.getColor(R.styleable.BlockButton_buttonDisabledGapColor, Color.DKGRAY);
+    }
+
+    protected int getBtnStrokeWidth(final TypedArray typedArray) {
+        return typedArray.getInt(R.styleable.BlockButton_buttonStrokeWidth, 0);
+    }
+
+    protected int getBtnStrokeColor(final TypedArray typedArray) {
+        return typedArray.getColor(R.styleable.BlockButton_buttonStrokeColor, btnColor);
     }
 
     protected int getPushDepth(final TypedArray typedArray) {

@@ -25,7 +25,7 @@ add below code in `build.gradle (Module: app)`
 ```gradle
 dependencies {
 	// ... other dependencies here
-    compile 'com.brouding:android-block-button:0.1.2.2'
+    compile 'com.brouding:android-block-button:0.1.3'
 }
 ```
 ---
@@ -39,6 +39,8 @@ dependencies {
     app:buttonGapColor="@color/blockButtonGapColor"
     app:buttonDisabledColor="#999999"
     app:buttonDisabledGapColor="@color/blockButtonDisabledGapColor"
+		app:buttonStrokeWidth="1"
+		app:buttonStokeColor="@color/blockButtonColor"
     android:id="@+id/btn_reset_guide"
     android:layout_width="wrap_content"
     android:layout_height="50dp"

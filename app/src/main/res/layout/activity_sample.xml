@@ -41,8 +41,10 @@
 
     <com.brouding.blockbutton.BlockButton
         app:pushDepthDp="4"
-        app:buttonColor="#2861b0"
+        app:buttonColor="#ffffff"
         app:buttonGapColor="#1c395e"
+        app:buttonStrokeWidth="1"
+        app:buttonStrokeColor="#2861b0"
         android:id="@+id/btn_show_progress_dialog"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
@@ -58,7 +60,7 @@
             android:paddingLeft="17dp"
             android:paddingRight="17dp"
             android:textStyle="bold"
-            android:textColor="#ffffff"
+            android:textColor="#2861b0"
             android:textSize="17dp"
             android:text="Show ProgressDialog" />
 
